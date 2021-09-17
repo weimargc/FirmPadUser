@@ -39,9 +39,9 @@
     <div class="col-12">
       <h1>FIRMA USUARIO</h1>
       <div style="margin: auto;" class="signature-pad">
-        <div class="signature-pad-body">
+        <div class="signature-pad-body border border-primary rounded">
           &nbsp;FIRMA DIGITAL:
-
+            <canvas #firmUserPad width="500" height="160" style="touch-action: none;"></canvas>
         </div>
       </div>
     </div>
@@ -49,10 +49,14 @@
   <br>
   <div class="row">
     <div class="col-6">
-
+      <button class="btn btn-block btn-danger" (click)="cleanSignature()">Borrar firma</button>
+      <button class="btn btn-block btn-warning ms-1 me-1"  (click)="unDo()">Deshacer</button>
+      <button class="btn btn-block btn-info"  (click)="changeColor()">Cambiar color</button>
     </div>
     <div class="col-6">
-
+      <button class="btn btn-block btn-success"  (click)="savePng()">PNG</button>
+      <button class="btn btn-block btn-primary mx-1"  (click)="saveJpg()">JPG</button>
+      <button class="btn btn-block btn-secondary"  (click)="saveSvg()">SVG</button>
     </div>
   </div>
 
